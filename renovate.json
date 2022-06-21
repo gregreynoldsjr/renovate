@@ -1,5 +1,11 @@
 {
-  "extends": [
-    "config:base"
-  ]
+    "extends": ["config:base"],
+    "rangeStrategy": "pin",
+    "ignorePaths": ["examples/**"],
+    "automerge": true,
+    "packageRules": [{
+        "packagePatterns": ["^angular.*"],
+        "groupName": "angular",
+        "automerge": true
+    }]
 }
